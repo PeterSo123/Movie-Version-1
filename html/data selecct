@@ -1,0 +1,12 @@
+<?php
+    include("connect.php");
+    
+    $sql = "SELECT MName From movie";
+    if($stmt = $db->query($sql))
+    {
+        while($result = mysqli_fetch_object($stmt))
+        {
+            echo '<p>'.$result->MName.'</p>';
+        }
+    }
+?>
